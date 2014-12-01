@@ -267,6 +267,37 @@ function twentytwelve_widgets_init() {
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
+
+register_sidebar(array(
+  'name' => __( 'Site Footer' ),
+  'id' => 'site-footer',
+  'description' => __( 'Use this area for adding social media icons to footer.' ),
+  'before_widget' => '<div id="%1$s" class="widget %2$s clearfix"><div class="widget-section">',
+  'after_widget' => '</div></div>',
+  'before_title' => '',
+  'after_title' => ''
+  ));
+
+register_sidebar(array(
+  'name' => __( 'Greenville Footer' ),
+  'id' => 'site-footer',
+  'description' => __( 'Use this area for adding Greenville social media icons to footer.' ),
+  'before_widget' => '<div id="%1$s" class="widget %2$s clearfix"><div class="widget-section">',
+  'after_widget' => '</div></div>',
+  'before_title' => '',
+  'after_title' => ''
+  ));
+
+register_sidebar(array(
+  'name' => __( 'Clemson Footer' ),
+  'id' => 'site-footer',
+  'description' => __( 'Use this area for adding Clemson social media icons to footer.' ),
+  'before_widget' => '<div id="%1$s" class="widget %2$s clearfix"><div class="widget-section">',
+  'after_widget' => '</div></div>',
+  'before_title' => '',
+  'after_title' => ''
+  ));
+
 }
 add_action( 'widgets_init', 'twentytwelve_widgets_init' );
 
