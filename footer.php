@@ -13,15 +13,15 @@
 <footer id="colophon" role="contentinfo">
 	<div class="widget-wrap">
 		<?php if ( is_page_template( 'page-clemson.php' ) ) {
-			echo 'page-clemson.php';
+			//echo 'page-clemson.php';
 			dynamic_sidebar( 'clemson-footer' );
 		}
 		if ( is_page_template( 'page-greenville.php' ) ) {
-			echo 'page-clemson.php';
+			//echo 'page-clemson.php';
 			dynamic_sidebar( 'greenville-footer' );
 		} 
 		if ((!is_page_template( 'page-clemson.php' )) && (!is_page_template( 'page-greenville.php' ))){
-			echo 'Other Template';
+			//echo 'Other Template';
 			dynamic_sidebar( 'site-footer' );
 		}
 		?>

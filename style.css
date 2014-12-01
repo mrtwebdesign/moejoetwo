@@ -1765,5 +1765,7 @@ img#wpstats {
             border-bottom: 1px solid #875a34; }
             header.site-header #site-navigation .nav-menu.toggled-on li a:hover {
               background-color: #fffcf2; } }
+.footer-social {
+  font-size: 40px; }
 
 /*# sourceMappingURL=style.css.map */
