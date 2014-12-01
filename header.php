@@ -28,6 +28,7 @@
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <?php wp_head(); ?>
 </head>
 
@@ -37,11 +38,13 @@
 			<hgroup>
 				<div class="logo">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-						<img height="200" width="323" src="<?php echo get_stylesheet_directory_uri(); ?>/images/moe-joe-logo-small_full.png">
+						<img height="200" width="387" src="<?php echo get_stylesheet_directory_uri(); ?>/images/mj_logo_387x200.png">
 					</a>
 				</div>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+				<div class="headline-wrap">
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<!-- h2 class="site-description"><?php //bloginfo( 'description' ); ?></h2 -->
+				</div>
 			</hgroup>
 
 			<nav id="site-navigation" class="main-navigation" role="navigation">

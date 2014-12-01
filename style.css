@@ -46,6 +46,15 @@ http://snook.ca/archives/html_and_css/font-size-with-rem
 http://blog.typekit.com/2011/11/09/type-study-sizing-the-legible-letter/
 
 
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box; }
+
+*, *:before, *:after {
+  -moz-box-sizing: inherit;
+       box-sizing: inherit; }
+
 /* =Reset
 -------------------------------------------------------------- */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -284,7 +293,7 @@ input[type="reset"]:active {
   background-repeat: repeat-x;
   background-image: -webkit-linear-gradient(top, #ebebeb, #e1e1e1);
   background-image: linear-gradient(top, #ebebeb, #e1e1e1);
-  box-shadow: inset 0 0 8px 2px #c6c6c6, 0 1px 0 0 #f4f4f4;
+  box-shadow: inset 0 0 8px 2px #EEE, 0 1px 0 0 #FFF;
   border-color: transparent; }
 
 .bypostauthor cite span {
@@ -519,12 +528,14 @@ a:hover {
 header.site-header {
   display: block;
   position: relative;
-  padding-left: 300px; }
+  padding-left: 225px; }
   header.site-header .logo img {
     display: block;
     position: absolute;
-    top: -35px;
-    left: -65px; }
+    top: 5px;
+    left: -30px; }
+  header.site-header .headline-wrap {
+    padding-left: 175px; }
 
 #site-navigation {
   border-bottom: 3px solid #875a34; }
@@ -567,8 +578,7 @@ header.site-header {
 
 /* Navigation Menu */
 .main-navigation {
-  margin-top: 24px;
-  margin-top: 1.714285714rem;
+  margin-top: 60px;
   text-align: center; }
 
 .main-navigation li {
@@ -1713,5 +1723,47 @@ img#wpstats {
   .comments-area article header time {
     margin-left: 50px;
     margin-left: 3.57142857rem; } }
+@media screen and (max-width: 799px) {
+  header.site-header {
+    padding: 0 20px; }
+    header.site-header .logo {
+      display: block;
+      position: relative;
+      text-align: center; }
+      header.site-header .logo img {
+        display: block;
+        position: relative;
+        top: 5px;
+        left: auto;
+        margin-left: auto;
+        margin-right: auto; }
+    header.site-header .headline-wrap {
+      padding: 20px 20px;
+      text-align: center; }
+      header.site-header .headline-wrap .site-title {
+        text-align: center; }
+    header.site-header #site-navigation {
+      margin-top: 0;
+      padding-bottom: 20px; }
+      header.site-header #site-navigation button {
+        width: 40%; }
+      header.site-header #site-navigation .nav-menu {
+        text-align: center; }
+        header.site-header #site-navigation .nav-menu ul {
+          text-align: center; }
+      header.site-header #site-navigation .nav-menu.toggled-on {
+        display: block;
+        text-align: center; }
+        header.site-header #site-navigation .nav-menu.toggled-on li {
+          margin-top: 5px; }
+          header.site-header #site-navigation .nav-menu.toggled-on li a {
+            text-decoration: none;
+            width: 100%;
+            display: block;
+            position: relative;
+            padding: 10px 15px;
+            border-bottom: 1px solid #875a34; }
+            header.site-header #site-navigation .nav-menu.toggled-on li a:hover {
+              background-color: #fffcf2; } }
 
 /*# sourceMappingURL=style.css.map */
