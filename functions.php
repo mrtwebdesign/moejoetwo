@@ -298,6 +298,36 @@ function twentytwelve_widgets_init() {
 		'after_title' => ''
 		));
 
+	register_sidebar(array(
+		'name' => __( 'Site Sidebar' ),
+		'id' => 'site-sidebar',
+		'description' => __( 'Main site sidebar.' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s clearfix"><div class="widget-section">',
+		'after_widget' => '</div></div>',
+		'before_title' => '',
+		'after_title' => ''
+		));
+
+	register_sidebar(array(
+		'name' => __( 'Greenville Sidebar' ),
+		'id' => 'greenville-sidebar',
+		'description' => __( 'Greenville sidebar.' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s clearfix"><div class="widget-section">',
+		'after_widget' => '</div></div>',
+		'before_title' => '',
+		'after_title' => ''
+		));
+
+	register_sidebar(array(
+		'name' => __( 'Clemson Sidebar' ),
+		'id' => 'clemson-sidebar',
+		'description' => __( 'Clemson sidebar.' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s clearfix"><div class="widget-section">',
+		'after_widget' => '</div></div>',
+		'before_title' => '',
+		'after_title' => ''
+		));
+
 }
 add_action( 'widgets_init', 'twentytwelve_widgets_init' );
 

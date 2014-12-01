@@ -10,8 +10,26 @@
  */
 ?>
 
-	<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
 		<div id="secondary" class="widget-area" role="complementary">
-			<?php dynamic_sidebar( 'sidebar-1' ); ?>
+		<?php if ( is_page_template( 'page-clemson.php' ) ) {
+			//echo 'page-clemson.php';
+			dynamic_sidebar( 'clemson-sidebar' );
+		}
+		if ( is_page_template( 'page-greenville.php' ) ) {
+			//echo 'page-clemson.php';
+			dynamic_sidebar( 'greenville-sidebar' );
+		} 
+		if ((!is_page_template( 'page-clemson.php' )) && (!is_page_template( 'page-greenville.php' ))){
+			//echo 'Other Template';
+			dynamic_sidebar( 'site-sidebar' );
+		}
+		?>
 		</div><!-- #secondary -->
-	<?php endif; ?>
+
+
+
+
+
+
+
+
