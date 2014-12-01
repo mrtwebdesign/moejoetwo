@@ -69,7 +69,7 @@ function twentytwelve_setup() {
 	 */
 	add_theme_support( 'custom-background', array(
 		'default-color' => 'e6e6e6',
-	) );
+		) );
 
 	// This theme uses a custom image size for featured images, displayed on "standard" posts.
 	add_theme_support( 'post-thumbnails' );
@@ -117,7 +117,7 @@ function twentytwelve_get_font_url() {
 		$query_args = array(
 			'family' => 'Open+Sans:400italic,700italic,400,700',
 			'subset' => $subsets,
-		);
+			);
 		$font_url = add_query_arg( $query_args, "$protocol://fonts.googleapis.com/css" );
 	}
 
@@ -246,7 +246,7 @@ function twentytwelve_widgets_init() {
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
-	) );
+		) );
 
 	register_sidebar( array(
 		'name' => __( 'First Front Page Widget Area', 'twentytwelve' ),
@@ -256,7 +256,7 @@ function twentytwelve_widgets_init() {
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
-	) );
+		) );
 
 	register_sidebar( array(
 		'name' => __( 'Second Front Page Widget Area', 'twentytwelve' ),
@@ -266,37 +266,37 @@ function twentytwelve_widgets_init() {
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
-	) );
+		) );
 
-register_sidebar(array(
-  'name' => __( 'Site Footer' ),
-  'id' => 'site-footer',
-  'description' => __( 'Use this area for adding social media icons to footer.' ),
-  'before_widget' => '<div id="%1$s" class="widget %2$s clearfix"><div class="widget-section">',
-  'after_widget' => '</div></div>',
-  'before_title' => '',
-  'after_title' => ''
-  ));
+	register_sidebar(array(
+		'name' => __( 'Site Footer' ),
+		'id' => 'site-footer',
+		'description' => __( 'Use this area for adding social media icons to footer.' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s clearfix"><div class="widget-section">',
+		'after_widget' => '</div></div>',
+		'before_title' => '',
+		'after_title' => ''
+		));
 
-register_sidebar(array(
-  'name' => __( 'Greenville Footer' ),
-  'id' => 'site-footer',
-  'description' => __( 'Use this area for adding Greenville social media icons to footer.' ),
-  'before_widget' => '<div id="%1$s" class="widget %2$s clearfix"><div class="widget-section">',
-  'after_widget' => '</div></div>',
-  'before_title' => '',
-  'after_title' => ''
-  ));
+	register_sidebar(array(
+		'name' => __( 'Greenville Footer' ),
+		'id' => 'greenville-footer',
+		'description' => __( 'Use this area for adding Greenville social media icons to footer.' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s clearfix"><div class="widget-section">',
+		'after_widget' => '</div></div>',
+		'before_title' => '',
+		'after_title' => ''
+		));
 
-register_sidebar(array(
-  'name' => __( 'Clemson Footer' ),
-  'id' => 'site-footer',
-  'description' => __( 'Use this area for adding Clemson social media icons to footer.' ),
-  'before_widget' => '<div id="%1$s" class="widget %2$s clearfix"><div class="widget-section">',
-  'after_widget' => '</div></div>',
-  'before_title' => '',
-  'after_title' => ''
-  ));
+	register_sidebar(array(
+		'name' => __( 'Clemson Footer' ),
+		'id' => 'clemson-footer',
+		'description' => __( 'Use this area for adding Clemson social media icons to footer.' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s clearfix"><div class="widget-section">',
+		'after_widget' => '</div></div>',
+		'before_title' => '',
+		'after_title' => ''
+		));
 
 }
 add_action( 'widgets_init', 'twentytwelve_widgets_init' );
@@ -313,12 +313,12 @@ function twentytwelve_content_nav( $html_id ) {
 	$html_id = esc_attr( $html_id );
 
 	if ( $wp_query->max_num_pages > 1 ) : ?>
-		<nav id="<?php echo $html_id; ?>" class="navigation" role="navigation">
-			<h3 class="assistive-text"><?php _e( 'Post navigation', 'twentytwelve' ); ?></h3>
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'twentytwelve' ) ); ?></div>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?></div>
-		</nav><!-- #<?php echo $html_id; ?> .navigation -->
-	<?php endif;
+	<nav id="<?php echo $html_id; ?>" class="navigation" role="navigation">
+		<h3 class="assistive-text"><?php _e( 'Post navigation', 'twentytwelve' ); ?></h3>
+		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'twentytwelve' ) ); ?></div>
+		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?></div>
+	</nav><!-- #<?php echo $html_id; ?> .navigation -->
+<?php endif;
 }
 endif;
 
@@ -336,52 +336,52 @@ if ( ! function_exists( 'twentytwelve_comment' ) ) :
 function twentytwelve_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
 	switch ( $comment->comment_type ) :
-		case 'pingback' :
-		case 'trackback' :
+	case 'pingback' :
+	case 'trackback' :
 		// Display trackbacks differently than normal comments.
 	?>
 	<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
 		<p><?php _e( 'Pingback:', 'twentytwelve' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( '(Edit)', 'twentytwelve' ), '<span class="edit-link">', '</span>' ); ?></p>
-	<?php
-			break;
+		<?php
+		break;
 		default :
 		// Proceed with normal comments.
 		global $post;
-	?>
-	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
-		<article id="comment-<?php comment_ID(); ?>" class="comment">
-			<header class="comment-meta comment-author vcard">
-				<?php
+		?>
+		<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+			<article id="comment-<?php comment_ID(); ?>" class="comment">
+				<header class="comment-meta comment-author vcard">
+					<?php
 					echo get_avatar( $comment, 44 );
 					printf( '<cite><b class="fn">%1$s</b> %2$s</cite>',
 						get_comment_author_link(),
 						// If current post author is also comment author, make it known visually.
 						( $comment->user_id === $post->post_author ) ? '<span>' . __( 'Post author', 'twentytwelve' ) . '</span>' : ''
-					);
+						);
 					printf( '<a href="%1$s"><time datetime="%2$s">%3$s</time></a>',
 						esc_url( get_comment_link( $comment->comment_ID ) ),
 						get_comment_time( 'c' ),
 						/* translators: 1: date, 2: time */
 						sprintf( __( '%1$s at %2$s', 'twentytwelve' ), get_comment_date(), get_comment_time() )
-					);
-				?>
-			</header><!-- .comment-meta -->
+						);
+						?>
+					</header><!-- .comment-meta -->
 
-			<?php if ( '0' == $comment->comment_approved ) : ?>
-				<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'twentytwelve' ); ?></p>
-			<?php endif; ?>
+					<?php if ( '0' == $comment->comment_approved ) : ?>
+						<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'twentytwelve' ); ?></p>
+					<?php endif; ?>
 
-			<section class="comment-content comment">
-				<?php comment_text(); ?>
-				<?php edit_comment_link( __( 'Edit', 'twentytwelve' ), '<p class="edit-link">', '</p>' ); ?>
-			</section><!-- .comment-content -->
+					<section class="comment-content comment">
+						<?php comment_text(); ?>
+						<?php edit_comment_link( __( 'Edit', 'twentytwelve' ), '<p class="edit-link">', '</p>' ); ?>
+					</section><!-- .comment-content -->
 
-			<div class="reply">
-				<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply', 'twentytwelve' ), 'after' => ' <span>&darr;</span>', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
-			</div><!-- .reply -->
-		</article><!-- #comment-## -->
-	<?php
-		break;
+					<div class="reply">
+						<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply', 'twentytwelve' ), 'after' => ' <span>&darr;</span>', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+					</div><!-- .reply -->
+				</article><!-- #comment-## -->
+				<?php
+				break;
 	endswitch; // end comment_type check
 }
 endif;
@@ -408,13 +408,13 @@ function twentytwelve_entry_meta() {
 		esc_attr( get_the_time() ),
 		esc_attr( get_the_date( 'c' ) ),
 		esc_html( get_the_date() )
-	);
+		);
 
 	$author = sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>',
 		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 		esc_attr( sprintf( __( 'View all posts by %s', 'twentytwelve' ), get_the_author() ) ),
 		get_the_author()
-	);
+		);
 
 	// Translators: 1 is category, 2 is tag, 3 is the date and 4 is the author's name.
 	if ( $tag_list ) {
@@ -431,7 +431,7 @@ function twentytwelve_entry_meta() {
 		$tag_list,
 		$date,
 		$author
-	);
+		);
 }
 endif;
 
