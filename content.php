@@ -9,7 +9,7 @@
  * @since Twenty Twelve 1.0
  */
 ?>
-
+<?php echo '<!-- '.__file__.' -->' ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
 		<div class="featured-post">

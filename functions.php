@@ -41,6 +41,11 @@ if ( ! isset( $content_width ) )
  *
  * @since Twenty Twelve 1.0
  */
+
+require_once __DIR__.'/metaboxes.php';
+
+
+
 function twentytwelve_setup() {
 	/*
 	 * Makes Twenty Twelve available for translation.
