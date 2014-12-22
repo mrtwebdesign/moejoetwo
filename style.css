@@ -191,9 +191,9 @@ img {
 .widget-title,
 .entry-content th,
 .comment-content th {
-  font-size: 11px;
-  font-size: 0.785714286rem;
-  line-height: 2.181818182;
+  font-size: 42px;
+  font-size: 3rem;
+  line-height: 1.181818182;
   font-weight: bold;
   text-transform: uppercase;
   color: #636363; }
@@ -1553,8 +1553,8 @@ img#wpstats {
     display: none; }
 
   .entry-header .entry-title {
-    font-size: 22px;
-    font-size: 1.571428571rem; }
+    font-size: 42px;
+    font-size: 3rem; }
 
   #respond form input[type="text"] {
     width: 46.333333333%; }
